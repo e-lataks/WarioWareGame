@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://bmy7xnbwcnynn"]
+
+[ext_resource type="Script" uid="uid://dnqw8ojaijfti" path="res://scenes/menus/settings.gd" id="1_erjg3"]
+[ext_resource type="Texture2D" uid="uid://dqrb7db2tyv1v" path="res://assets/sprites/background.png" id="2_e7wif"]
+
+[node name="Control" type="Control" unique_id=1120438540]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_erjg3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1973211441]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=1177208194]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_e7wif")
+
+[node name="Title" type="Label" parent="." unique_id=1392273525]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.0
+offset_top = 20.0
+offset_right = 164.0
+offset_bottom = 135.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_font_sizes/font_size = 84
+text = "Settings"
+
+[node name="Button" type="Button" parent="." unique_id=337065225]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 466.0
+offset_right = 583.0
+offset_bottom = 497.0
+text = "Back"
+
+[node name="Music" type="Label" parent="." unique_id=2014126874]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 171.0
+offset_top = -122.0
+offset_right = 217.0
+offset_bottom = -99.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 56
+text = "Music"
+
+[node name="SoundEffects" type="Label" parent="." unique_id=326342530]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 124.0
+offset_top = -386.0
+offset_right = 432.0
+offset_bottom = -321.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 47
+text = "Sound Effects"
+
+[node name="MusicSlider" type="HSlider" parent="." unique_id=209240537]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = -121.0
+offset_right = 145.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 2
+min_value = -50.0
+max_value = 0.0
+
+[node name="SfSlider" type="HSlider" parent="." unique_id=1149090019]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 273.0
+offset_right = 731.0
+offset_bottom = 334.0
+min_value = -50.0
+max_value = 0.0
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=549540315]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 352.0
+offset_right = 593.0
+offset_bottom = 455.0
+
+[node name="Fullscreen" type="Label" parent="." unique_id=1116218946]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 355.0
+offset_right = 381.0
+offset_bottom = 419.0
+theme_override_font_sizes/font_size = 46
+text = "Fullscreen"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="value_changed" from="MusicSlider" to="." method="_on_music_slider_value_changed"]

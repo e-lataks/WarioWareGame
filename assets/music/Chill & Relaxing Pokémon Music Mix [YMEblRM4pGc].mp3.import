@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://jdc487yxn1no"
+path="res://.godot/imported/Chill & Relaxing Pokémon Music Mix [YMEblRM4pGc].mp3-1f8681852c85f47f7714ac05c6767ee1.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Chill & Relaxing Pokémon Music Mix [YMEblRM4pGc].mp3"
+dest_files=["res://.godot/imported/Chill & Relaxing Pokémon Music Mix [YMEblRM4pGc].mp3-1f8681852c85f47f7714ac05c6767ee1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

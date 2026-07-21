@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://l28bgwr7rsq1"]
+
+[ext_resource type="Script" uid="uid://dk6gf4ig4c3sh" path="res://scripts/main_menu.gd" id="1_nwwjl"]
+[ext_resource type="Texture2D" uid="uid://dqrb7db2tyv1v" path="res://assets/sprites/background.png" id="1_wjjpd"]
+[ext_resource type="Texture2D" uid="uid://noph84yj3bh8" path="res://assets/sprites/5209763456.png" id="2_nwwjl"]
+[ext_resource type="AudioStream" uid="uid://p17pbe57xdb3" path="res://assets/music/buttonsound.MP3" id="4_tjt80"]
+
+[node name="Control" type="Control" unique_id=181898848]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nwwjl")
+
+[node name="Background" type="TextureRect" parent="." unique_id=256646198]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -226.0
+offset_top = -147.0
+offset_right = 158.0
+offset_bottom = 229.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wjjpd")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1753756917]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 257.0
+offset_right = 398.0
+offset_bottom = 627.0
+texture = ExtResource("2_nwwjl")
+
+[node name="TitleScreen" type="VBoxContainer" parent="." unique_id=1307417664]
+modulate = Color(1.6852883, 1.6852883, 1.6852883, 1)
+self_modulate = Color(1.2742168, 1.2149264, 1.2742168, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -138.0
+offset_right = 110.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="TitleScreen" unique_id=1215688802]
+modulate = Color(1.1488971e-05, 1.1488971e-05, 0.010583283, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 96
+text = "PokeWare"
+horizontal_alignment = 1
+
+[node name="PlayButton" type="Button" parent="TitleScreen" unique_id=1774489720]
+layout_mode = 2
+text = "Play"
+
+[node name="SettingsButton" type="Button" parent="TitleScreen" unique_id=1684219965]
+layout_mode = 2
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="TitleScreen" unique_id=2129191569]
+layout_mode = 2
+text = "Quit"
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=923439494]
+stream = ExtResource("4_tjt80")
+bus = &"Sound Effects"
+
+[connection signal="mouse_entered" from="TitleScreen/PlayButton" to="." method="_on_any_button_hover"]
+[connection signal="mouse_entered" from="TitleScreen/SettingsButton" to="." method="_on_any_button_hover"]
+[connection signal="pressed" from="TitleScreen/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="mouse_entered" from="TitleScreen/QuitButton" to="." method="_on_any_button_hover"]
