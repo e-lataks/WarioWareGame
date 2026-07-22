@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c7ov82obmujo6"]
+
+[ext_resource type="Script" uid="uid://druykaspjetqo" path="res://scenes/minigames/click_pokemon.gd" id="1_f51ih"]
+[ext_resource type="Texture2D" uid="uid://dm2vy64u3xxgn" path="res://assets/sprites/snorlax.png" id="2_gd7kn"]
+[ext_resource type="Texture2D" uid="uid://cjtb535qlc40k" path="res://assets/sprites/blue-bg.png" id="3_gd7kn"]
+
+[node name="ClickPokemon" type="Control" unique_id=246286524]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_f51ih")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1157845356]
+show_behind_parent = true
+clip_children = 2
+light_mask = 4
+visibility_layer = 4
+layout_mode = 0
+offset_left = -38.0
+offset_top = -43.0
+offset_right = 1166.0
+offset_bottom = 682.0
+texture = ExtResource("3_gd7kn")
+expand_mode = 1
+
+[node name="CounterLabel" type="Label" parent="." unique_id=1622222118]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 529.0
+offset_right = 179.0
+offset_bottom = 604.0
+theme_override_font_sizes/font_size = 32
+
+[node name="TimeLabel" type="Label" parent="." unique_id=1660937998]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 28.0
+offset_right = 219.0
+offset_bottom = 108.0
+theme_override_font_sizes/font_size = 32
+
+[node name="GameTimer" type="Timer" parent="." unique_id=73765098]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="PokemonButton" type="TextureButton" parent="." unique_id=605846723]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 374.0
+offset_top = 155.0
+offset_right = 688.0
+offset_bottom = 442.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_gd7kn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
+[connection signal="pressed" from="PokemonButton" to="." method="_on_pokemon_button_pressed"]

@@ -17,3 +17,7 @@ func _on_settings_button_pressed() -> void:
 
 func _on_any_button_hover() -> void:
 	$HoverSound.play()
+
+
+func _on_play_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/game/game_manager.tscn")
