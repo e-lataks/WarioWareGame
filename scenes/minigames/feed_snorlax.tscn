@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://pomba3retgaw"]
+
+[ext_resource type="Script" uid="uid://ddyw3gqxy42ie" path="res://scenes/minigames/feed_snorlax.gd" id="1_85i13"]
+[ext_resource type="Texture2D" uid="uid://cjtb535qlc40k" path="res://assets/sprites/blue-bg.png" id="2_vaj3e"]
+[ext_resource type="Texture2D" uid="uid://dm2vy64u3xxgn" path="res://assets/sprites/snorlax.png" id="3_2dpmc"]
+[ext_resource type="Texture2D" uid="uid://ghp5tsxd7m3c" path="res://assets/sprites/berry.png" id="4_iof1e"]
+
+[node name="FeedSnorlax" type="Control" unique_id=669643121]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_85i13")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1931945377]
+layout_mode = 0
+offset_left = -43.0
+offset_top = -27.0
+offset_right = 1207.0
+offset_bottom = 714.0
+texture = ExtResource("2_vaj3e")
+expand_mode = 1
+
+[node name="TimeLabel" type="Label" parent="." unique_id=668131612]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 392.0
+offset_right = 347.0
+offset_bottom = 468.0
+
+[node name="GameTimer" type="Timer" parent="." unique_id=524501341]
+wait_time = 10.0
+one_shot = true
+
+[node name="Snorlax" type="TextureRect" parent="." unique_id=434695309]
+layout_mode = 0
+offset_left = 668.0
+offset_top = 178.0
+offset_right = 983.0
+offset_bottom = 463.0
+texture = ExtResource("3_2dpmc")
+expand_mode = 1
+
+[node name="Berry" type="TextureRect" parent="." unique_id=502378548]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 109.0
+offset_right = 305.0
+offset_bottom = 279.0
+texture = ExtResource("4_iof1e")
+expand_mode = 1
+
+[node name="MouthArea" type="ColorRect" parent="." unique_id=1701711253]
+visible = false
+layout_mode = 0
+offset_left = 737.0
+offset_top = 201.0
+offset_right = 928.0
+offset_bottom = 342.0
+color = Color(0.5306824, 0, 0.07772633, 1)
+
+[node name="FeedLabel" type="Label" parent="." unique_id=1525766134]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 35.0
+offset_right = 521.0
+offset_bottom = 143.0
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

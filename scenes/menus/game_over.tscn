@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://df43awe04se8w"]
+
+[ext_resource type="Script" uid="uid://dh1dj05egs5wk" path="res://scenes/menus/game_over.gd" id="1_ujjcl"]
+[ext_resource type="Texture2D" uid="uid://dqrb7db2tyv1v" path="res://assets/sprites/background.png" id="2_asori"]
+
+[node name="GameOver" type="Control" unique_id=149437318]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ujjcl")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1692380245]
+layout_mode = 0
+offset_left = -48.0
+offset_top = -81.0
+offset_right = 1190.0
+offset_bottom = 730.0
+texture = ExtResource("2_asori")
+expand_mode = 1
+
+[node name="GameOverLabel" type="Label" parent="." unique_id=1012555205]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 90.0
+offset_right = 947.0
+offset_bottom = 272.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9515795, 0.95157963, 0.9515795, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 120
+text = "Game Over!"
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=181472799]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 275.0
+offset_right = 710.0
+offset_bottom = 390.0
+theme_override_font_sizes/font_size = 80
+
+[node name="RestartButton" type="Button" parent="." unique_id=1096693516]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 484.0
+offset_right = 428.0
+offset_bottom = 547.0
+theme_override_font_sizes/font_size = 40
+text = "Restart"
+
+[node name="MenuButton" type="Button" parent="." unique_id=880140129]
+layout_mode = 0
+offset_left = 741.0
+offset_top = 485.0
+offset_right = 860.0
+offset_bottom = 548.0
+theme_override_font_sizes/font_size = 40
+text = "Menu"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

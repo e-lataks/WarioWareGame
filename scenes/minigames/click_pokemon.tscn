@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c7ov82obmujo6"]
 
 [ext_resource type="Script" uid="uid://druykaspjetqo" path="res://scenes/minigames/click_pokemon.gd" id="1_f51ih"]
-[ext_resource type="Texture2D" uid="uid://dm2vy64u3xxgn" path="res://assets/sprites/snorlax.png" id="2_gd7kn"]
-[ext_resource type="Texture2D" uid="uid://cjtb535qlc40k" path="res://assets/sprites/blue-bg.png" id="3_gd7kn"]
+[ext_resource type="Texture2D" uid="uid://d2a2vgtsrtaws" path="res://assets/sprites/ditto-bg.png" id="2_gd7kn"]
+[ext_resource type="Texture2D" uid="uid://5lx8vmwn15cw" path="res://assets/sprites/ditto.png" id="3_eyoc1"]
 
 [node name="ClickPokemon" type="Control" unique_id=246286524]
 layout_mode = 3
@@ -19,7 +19,7 @@ offset_left = -38.0
 offset_top = -43.0
 offset_right = 1166.0
 offset_bottom = 682.0
-texture = ExtResource("3_gd7kn")
+texture = ExtResource("2_gd7kn")
 expand_mode = 1
 
 [node name="CounterLabel" type="Label" parent="." unique_id=1622222118]
@@ -50,13 +50,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 374.0
-offset_top = 155.0
-offset_right = 688.0
-offset_bottom = 442.5
+offset_left = 225.0
+offset_top = -20.0
+offset_right = 876.0
+offset_bottom = 653.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("2_gd7kn")
+texture_normal = ExtResource("3_eyoc1")
 ignore_texture_size = true
 stretch_mode = 0
 
